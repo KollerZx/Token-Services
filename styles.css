@@ -1,0 +1,30 @@
+.background-page {
+   position: relative;
+}
+.background-page::before{
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 110%;
+    top:0px;
+    left:0px;
+    background-image: url(../img/telemaco-borba.png);
+    background-size: cover;
+    filter:grayscale(10%) brightness(60%);
+    z-index: -1;
+}
+.background-vt{
+    position: relative;
+}
+.background-vt::before{
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 180%;
+    top:0px;
+    left:0px;
+    background-image: url(../img/tb-trans.png);
+    background-size: cover;
+    filter:grayscale(10%) brightness(60%);
+    z-index: -1;
+}
