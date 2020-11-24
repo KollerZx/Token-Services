@@ -6,86 +6,56 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Vale Transporte</title>
     <link rel="stylesheet" href="css/styles.css">
-    <link
-      href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css"
-      rel="stylesheet"
-    />
 </head>
 
-<body class="background-vt container-mx-auto">
-    <h1 class="text-center text-3xl font-semibold text-white p-2">Solicitar Vale Transporte</h1>
-    <hr>
-    <div>
-        <form id="forms-vt" method="GET">
-            <div class="text-center p-2 m-4 text-white text-lg">
-                <label class="mx-2" for="metropolitano">
-                    <input id="metropolitano" value="Metropolitano" type="radio" name="itinerario"> Metropolitano
-                </label>
-                <label class="mx-2" for="telemaco">
-                    <input id="telemaco" value="Telemaco" type="radio" name="itinerario"> Linha Municipal
-                </label>
+<body class="background-vt">
+    <form id="forms-vt" method="POST">
+        <h1 class="">Solicitar Vale Transporte</h1>
+        <hr>
+        <label class="" for="metropolitano">
+            <input id="metropolitano" value="Metropolitano" type="radio" name="itinerario"> Metropolitano
+        </label>
+        <label class="" for="telemaco">
+            <input id="telemaco" value="Telemaco" type="radio" name="itinerario"> Linha Municipal
+        </label>
+    
+        <label class="" for="solicitacao">
+            <input id="solicitacao" value="solicitacao" type="radio" name="valeTransporte"> Solicitação
+        </label>
+        <label class="" for="cancelamento">
+            <input id="cancelamento" value="cancelamento" type="radio" name="valeTransporte"> Cancelamento
+        </label>
+        <hr>
+        <div class="">
+            <h2 class="">Dados do Solicitante</h2>
+            <div>
+                <label class="" for="nome"> Nome:</label> <br>
+                <input class="" id="nome" name="nome" type="text">
             </div>
-            <div class="text-center p-2 m-4 text-white text-lg">
-                <label class="mx-2" for="solicitacao">
-                    <input id="solicitacao" value="solicitacao" type="radio" name="valeTransporte"> Solicitação
-                </label>
-                <label class="mx-2" for="cancelamento">
-                    <input id="cancelamento" value="cancelamento" type="radio" name="valeTransporte"> Cancelamento
-                </label>
+            <div class="">
+                <label class="" for="matricula"> Matricula: </label><br>
+                <input class="" id="matricula" name="matricula" type="number">
             </div>
-            <hr>
-            <div class="w-auto">
-                <h2 class="text-center text-3xl font-semibold text-white p-4">Dados do Solicitante</h2>
-                <div class="px-48 mt-12 mx-20 text-lg">
-                    <div class="font-semibold">
-                        <div>
-                            <input type="hidden" id="subject" name="subject" value="Vale Transporte">
-                            <input type="hidden" id="body" name="body" value="">
-                        </div>
-                        <div class="p-4 px-64 mx-12">
-                            <label class="text-white"for="nome"> Nome:  
-                                <input class="w-4/5 focus:outline-none focus:shadow-outline focus:border-blue-300 text-black" id="nome" name="nome" type="text">
-                            </label>
-                        </div>
-                        <div class="p-4 px-64 mx-12">
-                            <label class="text-white" for="matricula"> Matricula: 
-                                <input class="w-1/5 focus:outline-none focus:shadow-outline focus:border-blue-300 text-black" id="matricula" name="matricula" type="number">
-                            </label>
-                        </div>
-                        <div class="p-4 px-64 mx-12">
-                            <label class="text-white" for="endereco"> Endereço: 
-                                <input class="w-4/5 focus:outline-none focus:shadow-outline focus:border-blue-300 text-black" id="endereco" type="text">
-                            </label>
-                        </div>
-                        <div class="p-4 px-64 mx-12">
-                            <label class="text-white"for="cidade"> Cidade: 
-                                <input class="w-2/5 focus:outline-none focus:shadow-outline focus:border-blue-300 text-black"id="cidade" type="text">
-                            </label>
-                        </div>
-                        <div class="p-4 px-64 mx-12">
-                            <label class="text-white" for="contato"> Contato: 
-                                <input class="w-2/5 focus:outline-none focus:shadow-outline focus:border-blue-300 text-black"id="contato" type="tel">
-                            </label>
-                        </div>
-                        <div class="p-4 px-64 mx-12">    
-                            <label class="text-white" for="setor"> Setor Trabalho: 
-                                <input class="w-4/5 focus:outline-none focus:shadow-outline focus:border-blue-300 text-black" id="setor" type="text">
-                            </label>
-                        </div>
-                        <div class="mx-64 px-32 p-2">
-                            <a id="confirmar" class="text-black font-semibold border-2 border-double rounded-lg bg-gray-300 p-2 m-2 bg-opacity-75" href="mailto:henrique.koller@pmtb.pr.gov.br?Subject=%20&Body=" onclick="formulario()">Confirmar</a>
-                        </div>
-                        <!-- <div class="mx-64 px-32 p-2">
-                            <input class="text-black font-semibold border-2 border-double rounded-lg bg-gray-300 p-2 m-2 bg-opacity-75" type="submit" name="confirmar" value="Confirmar">
-                        </div> -->
-                        <!-- <div class="mx-64 px-32 p-2">
-                            <button class="text-black font-semibold border-2 border-double rounded-lg bg-gray-300 p-2 m-2 bg-opacity-75" type="submit">Confirmar</button>
-                        </div> -->
-                        <script src="forms.js"></script>
-                    </div>
-                </div>
+            <div class="">
+                <label class="" for="endereco"> Endereço: </label><br>
+                <input class="" id="endereco" type="text">
             </div>
-        </form>
-    </div>
+            <div class="">
+                <label class="" for="cidade"> Cidade: </label><br>
+                <input class="" id="cidade" type="text">
+            </div>
+            <div class="">
+                <label class="" for="contato"> Contato: </label><br>
+                <input class="" id="contato" type="tel">
+            </div>
+            <div class="">    
+                <label class="" for="setor"> Setor: </label><br>
+                <input class="" id="setor" type="text">
+            </div>
+            <div class="">
+                <input class="" type="submit" name="confirmar" value="Confirmar">
+            </div> 
+        </div>
+    </form>
 </body>
 </html>
